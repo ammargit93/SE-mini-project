@@ -1,0 +1,51 @@
+{
+  "student-profile": [
+    {
+      "account": "Ammar Ansari",
+      "education": "vesit",
+      "experience": "none",
+      "headline": "desc",
+      "industry": "IT",
+      "location": "Mumbai",
+      "name": "Ammar Ansari",
+      "skill_list": [
+        "sql",
+        "python",
+        "c",
+        "java"
+      ],
+      "skills": "sql,python,c,java"
+    },
+    {
+      "account": "ammar",
+      "education": "vesit",
+      "email": "qw@123",
+      "experience": "none",
+      "headline": "desc",
+      "industry": "IT",
+      "location": "Mumbai",
+      "name": "Ammar Ansari",
+      "skill_list": [
+        "sql",
+        "c",
+        "python"
+      ],
+      "skills": "sql,c,python"
+    },
+    {
+      "account": "xyz",
+      "education": "vesit",
+      "email": "abc@123",
+      "experience": "none",
+      "headline": "desc",
+      "industry": "IT",
+      "location": "Mumbai",
+      "name": "Ammar Ansari",
+      "skill_list": [
+        "sql",
+        "python"
+      ],
+      "skills": "sql,python"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "account": "recruiter",
+      "content": "this is a post",
+      "id": 1,
+      "title": "recruiter posts"
+    },
+    {
+      "account": "recruiter",
+      "content": "kjpoiu",
+      "id": 2,
+      "title": "nbb"
+    },
+    {
+      "account": "recruiter",
+      "content": "efk34nf",
+      "id": 3,
+      "title": "lrjfoi4"
+    },
+    {
+      "account": "Ammar",
+      "content": "this is a post for requirements",
+      "id": 4,
+      "title": "this is a recruiters post"
+    },
+    {
+      "account": "xyz",
+      "content": "sql,python,c++,java,big data,hadoop,kafka,apache,nosql",
+      "id": 5,
+      "title": "Intel hiring software developers with 3yrs experience"
+    }
+  ]
+}

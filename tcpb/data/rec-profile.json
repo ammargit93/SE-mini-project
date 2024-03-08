@@ -1,0 +1,18 @@
+{
+  "recruiter-profile": [
+    {
+      "name": "recruiter",
+      "location": "Mumbai",
+      "industry": "IT",
+      "requirements": "c,python,sql",
+      "req_list": [
+        "c",
+        "python",
+        "sql"
+      ],
+      "company": "Google.Inc",
+      "position": "hr",
+      "account": "recruiter"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/intern.css">
+  <title>Tech Job Vacancies</title>
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="/">TechnoProbe</a>
+      </div>
+      <div class="search-bar">
+        <form action="/internship" method="POST">
+          <input type="text" placeholder="Search by region" name="search">
+          <button type="submit">Search</button>
+        </form>
+      </div>
+      <div class="nav-links">
+        <a href="/qna">QnA</a>
+        <a href="/community">Community</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container mt-4">
+    <h1 class="mb-4">Tech Job Vacancies</h1>
+
+    <!-- Side Button Triggering Modal -->
+    <div class="side-button">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#searchModal">
+        Search Skills & Interests
+      </button>
+    </div>
+
+    {% for job in jobs %}
+    <div class="card mb-3">
+      <div class="card-body">
+        <h3 class="card-title">{{ job['title']|safe }}</h3>
+        <p class="card-text">{{ job['companyName']|safe }}</p>
+        <p class="card-text" id="jobDescription">{{ job['description'][:200]|safe }}{% if job['description']|length > 200 %}...{% endif %}</p>
+
+        {% if job['description']|length > 200 %}
+        <button class="btn btn-link read-more" data-toggle="collapse" data-target="#collapse{{ loop.index }}" aria-expanded="false" aria-controls="collapse{{ loop.index }}">Read More</button>
+        <div class="collapse" id="collapse{{ loop.index }}">
+          <p class="card-text">{{ job['description']|safe }}</p>
+        </div>
+        {% endif %}
+        <h6>{{job['location']}}</h6>
+        <div class="d-flex justify-content-between">
+          <a href="{{ job['link'] }}" class="btn btn-primary" target="_blank">View Details</a>
+          <a href="{{ job['link'] }}"><p class="card-text">{{ job['link']|safe }}</p></a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- Modal Structure -->
+  <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="searchModalLabel">Search Skills & Interests</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Corrected form tag -->
+          <form method="POST" action="/internship" name="form2">
+            <!-- Skills Search Bar -->
+            <div class="form-group">
+              <label for="skillsInput">Skills:</label>
+              <input type="text" class="form-control" name="skills" id="skillsInput" placeholder="Enter skills">
+            </div>
+            <!-- Interests Search Bar -->
+            <div class="form-group">
+              <label for="interestsInput">Interests:</label>
+              <input type="text" class="form-control" name="interests" id="interestsInput" placeholder="Enter interests">
+            </div>
+            <!-- Corrected button type to submit -->
+            <button type="submit" class="btn btn-primary">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="app.js"></script>
+
+</body>
+
+</html>

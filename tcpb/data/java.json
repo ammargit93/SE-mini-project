@@ -1,0 +1,22 @@
+{
+  "java_forum": [
+    {
+      "account": "ammar",
+      "content": "klmk",
+      "id": 1,
+      "replies": [
+        {
+          "content": "reply"
+        }
+      ],
+      "title": "kko"
+    },
+    {
+      "account": "abcd",
+      "content": "xfgh",
+      "id": 2,
+      "replies": [],
+      "title": "jjknk"
+    }
+  ]
+}
