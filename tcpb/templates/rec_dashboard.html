@@ -171,7 +171,15 @@
         </nav>
         <img src="{{ url_for('static', filename='images/recruiter.jpg') }}" class="profile-pic">
     </header>
-
+<!--    {% with messages = get_flashed_messages() %}-->
+<!--        {% if messages %}-->
+<!--            <div class="flash-messages">-->
+<!--                {% for message in messages %}-->
+<!--                    <p class="flash-message">{{ message }}</p>-->
+<!--                {% endfor %}-->
+<!--            </div>-->
+<!--        {% endif %}-->
+<!--    {% endwith %}-->
     <div class="welcome">
         {%if name%}
             <h1>Welcome, {{name}}!</h1>
@@ -187,9 +195,9 @@
         </form>
     </section>
 
-    <form method="post" action="/find-candidates">
-        <button class="find-candidates" type="submit">Find Candidates</button>
-    </form>
+<!--    <form method="post" action="/find-candidates">-->
+<!--        <button class="find-candidates" type="submit">Find Candidates</button>-->
+<!--    </form>-->
 
     <footer>
         &copy; 2024 Recruiter Portal. All rights reserved.
