@@ -1,280 +1,49 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-<!--    <title>Website</title>-->
-<!--    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">-->
-<!--    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">-->
-
-<!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
-<!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
-<!--    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">-->
-<!--</head>-->
-<!--<title>Website</title>-->
-<!--<style>-->
-<!--    .TechnoProbe{-->
-<!--        margin-left: 10px;-->
-<!--        margin-right: 100px;-->
-<!--        display: inline-block;-->
-<!--        font-weight: 900;-->
-<!--        font-family: 'Poppins',sans-serif;-->
-<!--    }-->
-<!--    .profile-pic{-->
-<!--        width: 40px;-->
-<!--    }-->
-
-<!--    h2{-->
-<!--        display: inline-block;-->
-<!--        margin: 25px;-->
-<!--        font-weight: 900;-->
-<!--        font-family: 'Poppins',sans-serif;-->
-<!--        color: brown;-->
-<!--        text-decoration: none;-->
-<!--    }-->
-<!--    .about-us{-->
-<!--        margin-left: 185px;-->
-<!--    }-->
-<!--    .links{-->
-<!--        float: right;-->
-<!--        text-decoration: none;-->
-
-<!--    }-->
-<!--    #l1{-->
-<!--        text-decoration: none;-->
-<!--        color: brown;-->
-<!--    }-->
-<!--    #job-heading{-->
-<!--        margin-left: 25px;-->
-<!--    }-->
-<!--    .desc{-->
-<!--        width: 550px;-->
-<!--        margin-left: 25px;-->
-<!--        margin-top: 100px;-->
-<!--        font-family: 'Poppins', sans-serif;-->
-<!--    }-->
-<!--    .intro{-->
-
-<!--        width: 550px;-->
-<!--        height: 480px;-->
-<!--        margin-top: 65px;-->
-<!--        padding-bottom: 20px;-->
-<!--        margin-left: 25px;-->
-
-<!--        font-weight: 900;-->
-<!--        font-family:'Poppins', sans-serif;-->
-<!--        margin-left: 25px ;-->
-
-<!--    }-->
-<!--    .image1{-->
-<!--        height: 500px;-->
-<!--        width: 550px;-->
-<!--        margin-left: 650px;-->
-<!--        position: absolute;-->
-<!--        top: 155px;-->
-<!--        left: 0px;-->
-<!--        border-radius: 50%;-->
-<!--    }-->
-<!--    .findajob{-->
-<!--        color: cyan;-->
-<!--    }-->
-<!--    .join{-->
-<!--        color: cyan;-->
-<!--        text-decoration: none;-->
-<!--    }-->
-<!--    button{-->
-<!--        position: relative;-->
-<!--        top: 25px;-->
-<!--        padding: 20px;-->
-<!--        margin-left: 25px;-->
-<!--        border-radius: 20px;-->
-<!--        border:1px ;-->
-<!--        background-color: brown;-->
-<!--    }-->
-<!--    .community-intro{-->
-<!--        margin-left: 25px;-->
-<!--        position: relative;-->
-<!--        height: 500px;-->
-<!--        top: 150px;-->
-<!--        float: right;-->
-<!--        width: 630px;-->
-<!--        padding: 10px;-->
-<!--        font-weight: 900;-->
-<!--        font-family:'Poppins', sans-serif;-->
-<!--        margin-left: 25px ;-->
-
-
-<!--    }-->
-<!--    .button-2{-->
-<!--        position: relative;-->
-<!--        top: 25px;-->
-<!--        padding: 20px;-->
-<!--        border-radius: 20px;-->
-<!--        border: 1px;-->
-<!--        background-color: brown;-->
-<!--        width: 90px;-->
-<!--    }-->
-<!--    .join{-->
-<!--        color: aqua;-->
-
-<!--    }-->
-<!--    .image2{-->
-<!--        height: 400px;-->
-<!--        width: 500px;-->
-<!--        position: absolute;-->
-<!--        right: 665px;-->
-<!--        border-radius: 50%;-->
-<!--        float: left;-->
-<!--        margin-top: 200px;-->
-<!--    }-->
-<!--    .internship-intro{-->
-<!--        position: relative;-->
-<!--        top: 700px;-->
-<!--        font-family:'Poppins', sans-serif;-->
-
-<!--        width: 700px;-->
-<!--    }-->
-<!--    .google-logo{-->
-<!--        width: 300px;-->
-<!--        height: 300px;-->
-<!--        position: absolute;-->
-<!--        top: 1700px;-->
-<!--        left: 800px;-->
-<!--    }-->
-<!--    .microsoft-logo{-->
-<!--        width: 300px;-->
-<!--        height: 300px;-->
-<!--        position: absolute;-->
-<!--        top: 1300px;-->
-<!--        left: 800px;-->
-<!--    }-->
-<!--    .heading{-->
-<!--        text-align: center;-->
-<!--    }-->
-<!--    #head{-->
-<!--        color: black;-->
-<!--        font-weight: 300;-->
-<!--        font-family:'Poppins', sans-serif;-->
-<!--        margin-left: 25px;-->
-
-<!--    }-->
-<!--    .intern-para1{-->
-<!--        padding-left: 25px;-->
-<!--    }-->
-<!--    .Apply{-->
-<!--        color: cyan;-->
-<!--    }-->
-<!--    header{-->
-<!--        background-color: sky blue;-->
-<!--    }-->
-<!--    .container {-->
-<!--        display: flex;-->
-<!--        justify-content: center;-->
-<!--        align-items: center;-->
-<!--        height: 100vh;-->
-<!--        margin-top: 20px; /* Adjust as needed */-->
-<!--    }-->
-
-<!--    .form-container {-->
-<!--        text-align: center;-->
-<!--        background-color: #f0f0f0;-->
-<!--        padding: 20px;-->
-<!--        border-radius: 10px;-->
-<!--    }-->
-<!--</style>-->
-<!--<body>-->
-<!--<header>-->
-<!--<h1 class="TechnoProbe">TechnoProbe</h1>-->
-<!--<div class="links">-->
-<!--    <h2><a href="/about-us">About us</a></h2>-->
-<!--    <h2 style="text-decoration: none">QnA</h2>-->
-<!--    <h2><a href="/community">Community</a></h2>-->
-<!--    <h2><a href="/internship">Internship</a></h2>-->
-<!--    <a href="/register"><img src="{{url_for('static', filename='images/profile-pic.png')}}" class="profile-pic"></a>-->
-<!--</div>-->
-<!--<img src="{{ url_for('static', filename='images/image1.jpg') }}" class="image1">-->
-<!--</header>-->
-<!--<div class="desc">-->
-<!--    <h1>{%if name%}{{name}}-->
-<!--    </h1>-->
-<!--    <h1>Find a job which best suits you</h1>-->
-<!--    <p>-->
-<!--        <h3>Looking for a new job? Create a profile on TechnoProbe to-->
-<!--        connect directly with growing communities and companies.-->
-<!--        </p>-->
-<!--        <p>-->
-<!--            Today it has become extremely difficult to get a job for graduates-->
-<!--            from not so well known colleges and institutions, it has also become-->
-<!--            difficult to build valuable connections with potential employers.-->
-<!--            Well this website has everything you need to succeed in finding a job.-->
-<!--        </p></h3>-->
-
-<!--</div>-->
-<!--<button class="findajob">Find a Job</button>-->
-<!--<img src="{{ url_for('static', filename='images/image2.jpg') }}" class="image2">-->
-
-<!--<div class="community-intro">-->
-<!--    <h1>A Diverse Community</h1>-->
-<!--    <p>-->
-<!--        <h3>Explore our diverse tech community to solve doubts and-->
-<!--            asks questions on software and technology related subjects.-->
-<!--        </p>-->
-<!--        <p>-->
-<!--            TechnoProbe boasts a thriving and dynamic tech Community that is-->
-<!--            at the heart of its digital ecosystem.This tech community is a hub-->
-<!--            where passionate individuals, experts and enthusiasts from various corners of the-->
-<!--            tech world come together to share knowledge, collaborate on projects, stay up-to-date-->
-<!--            with the latest development in the ever-evolving field of technology.-->
-<!--        </p></h3>-->
-<!--        <button class="findajob"><a href="/community">Join</a></button>-->
-
-<!--</div>-->
-<!--<div class="internship-intro">-->
-<!--    <h1 id="intern-head">Discover Job and Internship opportunities</h1>-->
-
-<!--        <p><h3>-->
-<!--               <div class="intern-para1"> We offer a wide range of internship positions to cater to various-->
-<!--                interests and skill sets. Whether you're passionate about marketing, software development, design-->
-<!--                , finance, or more, we have opportunities for you.-->
-<!--                Explore our internship positions and find the one that aligns with your career aspirations:</div>-->
-<!--            <ul>-->
-<!--                <li>Marketing Intern</li>-->
-<!--                <li>Software Development Intern</li>-->
-<!--                <li> and Creative Intern</li>-->
-<!--                <li>Finance and Accounting Intern  </li>-->
-<!--            </ul>-->
-
-<!--        </h3>-->
-<!--        </p>-->
-<!--        <h1 id="head">Eligibility Criteria</h1>-->
-<!--        <p><h3>-->
-<!--            <div class="intern-para1">To be eligible for our internship program,-->
-<!--                candidates should meet the following requirements:</div>-->
-<!--            <ul>-->
-<!--                <li>Currently enrolled in a college or university program</li>-->
-<!--                <li>Strong communication and teamwork skills</li>-->
-<!--                <li>Passion for learning and a desire to excel</li>-->
-<!--            </ul>-->
-
-<!--        </p></h3>-->
-<!--        <button class="Apply">Apply</button>-->
-
-<!--</div>-->
-<!--<img src="{{ url_for('static', filename='images/google-logo.png') }}" class="google-logo">-->
-<!--<img src="{{ url_for('static', filename='images/microsoft.png') }}" class="microsoft-logo">-->
-
-<!--</body>-->
-<!--</html>-->
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Error Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .error-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 5rem;
+            color: #dc3545;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome, {{ username }}!</h1>
+    <div class="error-container">
+        <h1>Oops! Something went wrong.</h1>
+        <p>We're sorry, but an unexpected error occurred.</p>
+        <img src="https://example.com/error-image.png" alt="Error Image">
+    </div>
 </body>
 </html>

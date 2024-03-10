@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Website</title>
+    <title>TechnoProbe: A Career Guide</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
 
@@ -23,10 +23,18 @@
     <h4><a href="/community">Community</a></h4>
     <h4><a href="/internship">Internship</a></h4>
     <h4><a href="/profile">Profile</a></h4>
-    <a href="/signup"><img src="{{url_for('static', filename='images/profile-pic.png')}}" class="profile-pic"></a>
+<!--    <a href="/signup"><img src="{{url_for('static', filename='images/profile-pic.png')}}" class="profile-pic"></a>-->
+    <li class="dropdown">
+        <a href="#">Account</a>
+        <div class="dropdown-content">
+            <a href="/signup">Signup</a>
+            <a href="/login">Login</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </li>
 </div>
-    <a href="/logout">Logout</a>
-    <a href="/login">Login</a>
+<!--    <a href="/logout">Logout</a>-->
+<!--    <a href="/login">Login</a>-->
 
 <img src="{{ url_for('static', filename='images/image1.jpg') }}" class="image1">
 {% with messages = get_flashed_messages() %}
@@ -52,29 +60,9 @@
             difficult to build valuable connections with potential employers.
             Well this website has everything you need to succeed in finding a job.
         </p></h3>
-    
+    <button class="findajob"><a href="/internship">Find a Job</a></button>
 </div>
-<button class="findajob">Find a Job</button>
-<img src="{{ url_for('static', filename='images/image2.jpg') }}" class="image2">
 
-<div class="community-intro">
-    <h1>A Diverse Community</h1>
-    <p>
-        <h3>Explore our diverse tech community to solve doubts and 
-            asks questions on software and technology related subjects.
-        </h3>
-    </p>
-        <p>
-            TechnoProbe boasts a thriving and dynamic tech Community that is 
-            at the heart of its digital ecosystem.This tech community is a hub 
-            where passionate individuals, experts and enthusiasts from various corners of the
-            tech world come together to share knowledge, collaborate on projects, stay up-to-date
-            with the latest development in the ever-evolving field of technology.
-        </p>
-    </h3>
-        <button class="findajob"><a href="/community">Join</a></button>
-
-</div>
 <div class="internship-intro">
     <h1 id="intern-head">Discover Job and Internship opportunities</h1>
    
@@ -103,10 +91,29 @@
             </ul>
             
         </p></h3>
-        <button class="Apply">Apply</button>
-
 </div>
 <img src="{{ url_for('static', filename='images/google-logo.png') }}" class="google-logo">
 <img src="{{ url_for('static', filename='images/microsoft.png') }}" class="microsoft-logo">
+
+<img src="{{ url_for('static', filename='images/image2.jpg') }}" class="image2">
+
+<div class="community-intro">
+    <h1>A Diverse Community</h1>
+    <p>
+        <h3>Explore our diverse tech community to solve doubts and
+            asks questions on software and technology related subjects.
+        </h3>
+    </p>
+        <p>
+            TechnoProbe boasts a thriving and dynamic tech Community that is
+            at the heart of its digital ecosystem.This tech community is a hub
+            where passionate individuals, experts and enthusiasts from various corners of the
+            tech world come together to share knowledge, collaborate on projects, stay up-to-date
+            with the latest development in the ever-evolving field of technology.
+        </p>
+    </h3>
+        <button class="button-2"><a href="/community">Join</a></button>
+
+</div>
 </body>
 </html>
